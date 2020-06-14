@@ -70,11 +70,10 @@ getAllquotes();
                         JSONObject jsonObject_data=jsonArray_data.getJSONObject(i);
                         String quotes=jsonObject_data.getString("en");
                         list_quotes.addAll(Collections.singleton(quotes));
-                         index=random_index.nextInt(list_quotes.size());
-                         quote=list_quotes.get(index);
-
-
                     }
+
+                    index=random_index.nextInt(list_quotes.size());
+                    quote=list_quotes.get(index);
                     textView_quote.setText(quote);
                     textView_quote.setVisibility(View.VISIBLE);
                     button_showquote.setText("SHOW ANOTHER QUOTE");
